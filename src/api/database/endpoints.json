@@ -1,0 +1,33 @@
+{
+  "endpoints":[
+    {
+      "method": "post",
+      "address":"/api/v{version}/signin",
+      "description":"Rota de Login da api",
+      "parameters":[
+        {"key":"email","value":"Email do usuário"},
+        {"key":"password","value":"Senha do usuário"}
+      ]
+    },
+      {
+        "method": "post",
+        "address": "/api/v{version}/signup",
+        "description": "Rota de registro da api",
+        "parameters": [
+          { "key": "name", "value": "Nome do usuário" },
+          { "key": "email", "value": "Email do usuário" },
+          { "key": "cpf_cnpj", "value": "CPF/CNPJ do usuário" },
+          { "key": "password", "value": "Senha do usuário" }
+        ]
+      },
+      {
+        "method": "get",
+        "address": "/api/v{version}/list",
+        "description": "Rota de listagem de todos os usuários cadastrados, REQUER AUTENTICAÇÃO",
+        "parameters": [
+          { "key": "Authorization: Bearer *TOKEN*", "value": "coloque esses parâmetros no cabeçalho da requisição" }
+
+        ]
+      }
+    ]
+}

@@ -1,0 +1,167 @@
+:root{
+  --black200:#252525;
+  --black400:#454545;
+  --black700:#777777;
+  --gray100:#ababab;
+  --gray200:#cdcdcd;
+  --gray700:#efefef;
+  --blue700:#007bff;
+  --blue700L:#007bff22;
+  --green500:#1cba3e;
+  --green500L:#23fd5322;
+  --red500: #ff4400;
+  --red500L: #ff440022;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+li{
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+header{
+  padding: 0 10vw;
+  width: 100vw;
+  background-color: var(--black400);
+  height: 80px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: clamp(1.5rem, 2.5vw, 4rem); 
+  font-weight: bold;
+}
+code{
+  font-family: monospace;
+}
+.container{
+  padding: 2vh 10vw;
+
+
+}
+.api-prepare{
+  background-color: var(--gray700);
+}
+
+
+.list{
+  margin-top: 24px;
+  padding: 0 5vw;
+
+
+}
+.endpoint-list{
+  margin-top: 16px;
+
+}
+
+.endpoint-base{
+  border: 1px solid black;
+  border-radius: 4px;
+  font-weight: bold;
+  
+}
+.endpoint-link{
+  padding: 12px;
+  
+}
+.parameters-wrapper{
+  /* margin-top: 16px; */
+  padding: 8px 16px;
+  /* background-color: white; */
+}
+
+.grid-column2{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.parameters-info{
+  margin: 0;
+  font-weight: normal;
+}
+/* .pr-name{
+  background-color: red;
+
+}
+.pr-desc{
+  background-color: blue;
+} */
+
+.pr-name,.pr-desc{
+  padding: 4px;
+  font-weight: bold;
+}
+.prc-name,.prc-desc{
+  padding: 4px;
+
+}
+.pr-content{
+  margin-top: 24px;
+}
+
+.constant-tittle{
+  padding: 8px 16px;
+  background-color: white;
+  font-weight: bold;
+}
+
+.partial-description{
+  font-weight: normal;
+  margin: 16px 0;
+}
+
+
+.advice{
+  border: 1px solid var(--red500);
+  background-color: var(--red500L);
+  padding: 4px;
+  margin: 1px;
+  border-radius: 8px;
+}
+
+/*METHODS*/
+
+.get-base{
+  border: 1px solid var(--blue700);
+  background-color: var(--blue700L);
+}
+.get{
+  background-color: var(--blue700);
+  color: white;
+  padding: 4px 16px;
+  margin: 4px 12px 4px 4px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.post-base{
+  border: 1px solid var(--green500);
+  background-color: var(--green500L);
+}
+.post{
+  background-color: var(--green500);
+  color: white;
+  padding: 4px 16px;
+  margin: 4px 12px 4px 4px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+/*DYNAMIC*/
+
+.on-hide{
+  display: none;
+}

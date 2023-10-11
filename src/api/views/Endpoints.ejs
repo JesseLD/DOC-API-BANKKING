@@ -1,0 +1,54 @@
+<div class="list">
+  <section>
+    <h1>api</h1>
+
+    <ul class="endpoint-list">
+      
+      <% jsonData.endpoints.forEach(endpoint=>{%>
+
+        <li class="endpoint-base <%= endpoint.method %>-base">
+          <div class="endpoint-link">
+            <span class="method <%= endpoint.method %>"><%= endpoint.method %></span><%= endpoint.address %>
+          </div>
+
+          <div class="dynamic-content on-hide">
+            
+            <div class="constant-tittle">
+              <p>Parameters</p>
+            </div>
+
+            <div class="parameters-wrapper">
+
+              <div class="partial-description">
+                <%= endpoint.description %>
+              </div>
+
+              <div class="parameters-info">
+                <div class="pr-tittles  grid-column2">
+                  <div class="pr-name">
+                    <p class="pr-name-tittle">Name</p>
+                  </div>
+                  <div class="pr-desc">
+                    <p class="pr-desc-tittle">Description</p>
+                  </div>
+                </div>
+
+                <hr class="get-hr">
+
+                <div class="pr-content grid-column2">
+                  <% endpoint.parameters.forEach(parameter=>{ %>
+                    <p class="prc-name"><%= parameter.key %></p><p class="prc-desc"><%= parameter.value %></p>
+                  <% }) %>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        </li>
+
+        <% });%>
+
+
+    </ul>
+  </section>
+</div>
