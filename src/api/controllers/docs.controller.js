@@ -8,6 +8,6 @@ exports.index = async (req,res)=>{
 
   const jsonData = JSON.parse(data)
 
-  res.render("Index",{jsonData})
+  res.render(path.join(__dirname,"../views/Index"),{jsonData})
 
 } 
